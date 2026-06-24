@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Poiret_One } from "next/font/google";
 import "./globals.css";
 import { businessInfo } from "@/data/business-info";
+import { AmbientBackground } from "@/components/site/ambient-background";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -14,6 +15,14 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+});
+
+// Tipo art-deco fino que evoca o wordmark original "PONTO WINE".
+const poiret = Poiret_One({
+  subsets: ["latin"],
+  variable: "--font-poiret",
+  display: "swap",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -53,8 +62,15 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-PT" className={`${fraunces.variable} ${inter.variable}`}>
-      <body>{children}</body>
+    <html
+      lang="pt-PT"
+      className={`${fraunces.variable} ${inter.variable} ${poiret.variable}`}
+    >
+      <body>
+        {/* Atmosfera "garrafeira" inspirada no espaço real — fica por detrás de tudo */}
+        <AmbientBackground />
+        {children}
+      </body>
     </html>
   );
 }

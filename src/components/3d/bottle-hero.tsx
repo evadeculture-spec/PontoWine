@@ -101,8 +101,9 @@ export function BottleHero() {
 
   return (
     <div className="relative mx-auto aspect-square w-full max-w-[460px]">
-      {/* Halo de luz */}
-      <div className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-gold/10 blur-3xl" />
+      {/* Halo de luz — eco da iluminação LED magenta/dourada do espaço real */}
+      <div className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-glow-magenta/15 blur-3xl" />
+      <div className="pointer-events-none absolute inset-6 -z-10 rounded-full bg-gold/10 blur-2xl" />
 
       {/* Canvas 3D ou fallback */}
       <button

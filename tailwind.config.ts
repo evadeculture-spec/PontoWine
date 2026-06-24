@@ -39,6 +39,12 @@ const config: Config = {
         },
         cork: "#A9744F", // rolha / madeira
         stone: "#6F6257",
+        // Brilho de ambiente do espaço real (iluminação LED magenta/violeta)
+        glow: {
+          magenta: "#A8326B",
+          violet: "#5C2A66",
+          rose: "#C45B8C",
+        },
         cream: {
           DEFAULT: "#F7F1E8", // branco quente
           deep: "#EFE6D6",
@@ -88,6 +94,8 @@ const config: Config = {
       fontFamily: {
         serif: ["var(--font-fraunces)", "Georgia", "serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        // Wordmark art-deco (inspirado no logótipo real da Ponto Wine)
+        display: ["var(--font-poiret)", "var(--font-fraunces)", "serif"],
       },
       backgroundImage: {
         "paper-texture":

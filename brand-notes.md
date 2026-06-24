@@ -3,11 +3,18 @@
 Guia visual usado na construção da landing page. Estes valores estão refletidos
 em `tailwind.config.ts` e `src/app/globals.css`.
 
-> ⚠️ **Logo original ainda não fornecido.** Não foi encontrado nenhum ficheiro de
-> logo no repositório (estava vazio). Foi criado um **placeholder elegante**
-> (wordmark "Ponto Wine") em `src/components/brand/logo.tsx`, que mantém a
-> personalidade vínica da marca sem inventar um símbolo novo. Ver instruções de
-> substituição no fim deste documento.
+> 🎯 **Logótipo recriado a partir das fotografias da marca.** O logótipo real da
+> Ponto Wine é um **wordmark art-deco fino** que diz "PONTO WINE", com
+> "GARRAFEIRA" em maiúsculas espaçadas por baixo (visto no letreiro iluminado da
+> loja). O componente `src/components/brand/logo.tsx` reproduz fielmente esse
+> espírito com a tipografia **Poiret One** — sem inventar um símbolo novo. Para
+> usar um export vetorial oficial, ver instruções no fim deste documento.
+
+> 🏛️ **Atmosfera inspirada no espaço real.** As fotografias mostram uma
+> garrafeira de paredes cheias de garrafas, madeira quente, mesas intimistas com
+> lamparinas e um **brilho LED magenta/violeta** característico. Esse ambiente
+> foi recriado em `src/components/site/ambient-background.tsx`, que vive *por
+> detrás* de todo o conteúdo (parede de garrafas + glows magenta/violeta/dourado).
 
 ## Paleta de cores
 
@@ -26,11 +33,20 @@ exatamente às cores da marca.
 | `cork`           | `#A9744F` | Rolha/madeira — acentos e textura              |
 | `cream` (default)| `#F7F1E8` | Branco quente — texto principal, rótulos       |
 | `ink`            | `#120A0C` | Preto profundo — fundo geral                   |
+| `glow.magenta`   | `#A8326B` | Brilho LED magenta do espaço (ambiente)        |
+| `glow.violet`    | `#5C2A66` | Brilho LED violeta do espaço (ambiente)        |
+| `glow.rose`      | `#C45B8C` | Rosa quente — realce subtil de ambiente        |
+
+> Os tons `glow.*` derivam diretamente da **iluminação do espaço real** e são
+> usados apenas como brilhos de ambiente (blur, baixa opacidade) — nunca em texto.
 
 ## Tipografia
 
+- **Wordmark art-deco:** [Poiret One](https://fonts.google.com/specimen/Poiret+One)
+  (`font-display`) — usado **apenas no logótipo**, para evocar o lettering fino e
+  geométrico do logo original "PONTO WINE".
 - **Serifa de display:** [Fraunces](https://fonts.google.com/specimen/Fraunces)
-  — títulos, headlines e wordmark. Transmite carácter, calor e sofisticação.
+  — títulos e headlines. Transmite carácter, calor e sofisticação.
 - **Sans-serif de texto:** [Inter](https://fonts.google.com/specimen/Inter)
   — corpo de texto, formulários e UI. Legível e moderna.
 
